@@ -2,6 +2,15 @@
   "EVERYONE_FIELDS": [
     "name",
     "id",
+    "gender",
+    "bday",
+    "pfp",
+    "phone",
+    "address",
+    "blood",
+    "cgpa",
+    "status",
+    "station",
     "hostel",
     "room"
   ],
@@ -100,9 +109,19 @@
           "H152": "M.Phil. In Liberal Studies"
         }
       ]
+    },
+    {
+      "field": "gender",
+      "filter_name": "Gender",
+      "filter_toggles": [
+        {
+          "M": "Male",
+          "F": "Female"
+        }
+      ]
     }
   ],
-  "IS_ADMIN": false,
+  "IS_ADMIN": true,
   "PREFETCH_YEARS": [
     2019,
     2020,
