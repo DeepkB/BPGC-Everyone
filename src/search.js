@@ -166,6 +166,15 @@ function handleSignedInUser(response) {
     let email = user["email"]
     let userBitsID = email.substring(email.indexOf("@"))
 
+    let batch = userBitsID.substring(0, 4)
+
+    // Send batch for analytics
+    if(!IS_DEV && !IS_ADMIN) {
+        gtag("event", `batch`, {
+            "value": batch
+        })
+    }
+
     // Do something based off of the user ID
 }
 
