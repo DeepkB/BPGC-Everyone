@@ -164,9 +164,9 @@ function handleSignedInUser(response) {
     let user = JSON.parse(localStorage.getItem("gsi"))
 
     let email = user["email"]
-    let userBitsID = email.substring(email.indexOf("@"))
+    let userEmailID = email.substring(0, email.indexOf("@")) // Will be of the form f20xxyyyy
 
-    let batch = userBitsID.substring(0, 4)
+    let batch = userEmailID.substring(1, 5)
 
     // Send batch for analytics
     if(!IS_DEV && !IS_ADMIN) {
